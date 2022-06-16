@@ -27,4 +27,4 @@ Route::get('admin', function () {
 
 Route::get('admin', [AdminController::class, 'index']);
 Route::post('admin', [AdminController::class, 'addRoom']);
-Route::get('master',[PageController::class,'getIndex']);
+Route::get('trangchu',[PageController::class,'getIndex']);
