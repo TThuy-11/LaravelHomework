@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\signupController;
-use App\Http\Controllers\PageController;
-use App\Http\Controllers\AdminController;
+// use App\Http\Controllers\signupController;
+// use App\Http\Controllers\PageController;
+// use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TableController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,17 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('signup', function () {
-    return view('signup');
-});
-Route::post('signup', [signupController::class, 'displayInfor']);
+// Route::get('signup', function () {
+//     return view('signup');
+// });
+// Route::post('signup', [signupController::class, 'displayInfor']);
 
-Route::get('admin', function () {
-    return view('adminpage');
-});
+// Route::get('admin', function () {
+//     return view('adminpage');
+// });
 
-Route::get('admin', [AdminController::class, 'index']);
-Route::post('admin', [AdminController::class, 'addRoom']);
-Route::get('trangchu',[PageController::class,'getIndex']);
+// Route::get('admin', [AdminController::class, 'index']);
+// Route::post('admin', [AdminController::class, 'addRoom']);
+// Route::get('trangchu',[PageController::class,'getIndex']);
+
+Route::get("/",[TableController::class, 'table']);
