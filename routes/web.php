@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 // use App\Http\Controllers\signupController;
 // use App\Http\Controllers\PageController;
-// use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\TableController;
 
 /*
@@ -30,4 +30,6 @@ use App\Http\Controllers\TableController;
 // Route::post('admin', [AdminController::class, 'addRoom']);
 // Route::get('trangchu',[PageController::class,'getIndex']);
 
-Route::get("/",[TableController::class, 'table']);
+// Route::get("/",[TableController::class, 'table']);
+
+Route::get('sum', [UserController::class, 'tinhtong']);
